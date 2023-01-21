@@ -174,7 +174,25 @@
             background-color: #1408088f;
       }
     }
+    .project-delete-modal {
 
+      &__inner {
+       color: #fff;
+        background-color: #311212;
+    
+        p {
+          color: #fff;
+        }
+        button {
+          @include btn('50px');
+          background-color: #000;
+        }
+        span {
+          @include cancel();
+          font-weight: normal;
+        }
+      }
+    }
 
     .tasks {
       color: #fff;
