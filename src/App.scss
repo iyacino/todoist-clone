@@ -33,7 +33,7 @@
    // Variables
    $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
    $generic-border: 1px solid #f1f1f1;
-   $generic-bg: #db4c3f;
+   $generic-bg: #311212;
    
    /* Mixins
      ============================================ */
@@ -135,18 +135,111 @@
    /* Darkmode
      ============================================ */
    .darkmode {
-     header {
-       -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-       box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-       background-color: #282828;
-       border-color: transparent;
+     .header {
+       background-color: #311212;
+       border: none;
      }
-   }
-   
+     .content {
+      border: none;
+     }
+     .App {
+      color: #fff;
+      background-color: #311212;
+      border: none;
+    }
+    .sidebar {
+      color: #fff;
+      background-color: #311212;
+      border: none;
+    }
+    .sidebar h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+    .sidebar__generic li {
+        color: #fff;
+
+        &.active, &:hover {
+          font-weight: bold;
+          background-color: #1408088f;
+        }
+      }
+    .sidebar__project {  
+      color: #fff;
+          &.active, &:hover {
+            font-weight: bold;
+            background-color: #1408088f;
+      }
+    }
+
+
+    .tasks {
+      color: #fff;
+      background-color: #311212;
+      border: none;
+           
+      &__list li {
+        color: #fff;
+
+        padding-top: 10px;
+        background-color: #311212;
+        padding-bottom: 10px;
+        font-size: 14px;
+        list-style-type: none;
+        border-bottom: 1px solid #f0f0f0;
+        .checkbox {
+            border-color: #fafafa;
+            color: #fff;
+          }
+    }}
+}
+
+.add-task {
+  &__overlay {
+    background: rgba(243, 167, 167, 0.831);
+    
+    .add-task__main {
+    
+      .header {
+        color:#000;
+        background-color: #fff;
+      }
+    }
+    .add-task__cancel-x {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  
+  &__project, &__date {
+    color: rgb(0, 0, 0);
+  }
+
+ 
+  &__content {
+    border: 1px solid #ddd;
+  }
+}
+
+.add-task__plus, .add-project__plus {
+  color: #311212;
+  font-size: 18px;
+}
+
+.add-task__text, .add-project__text {
+  display: inline-block;
+  color: #311212;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
    /* Header
      ============================================ */
    header {
-     border-bottom: solid 1px #ca2100;
+     border-bottom: solid 1px #311212;
      background-color: $generic-bg;
      -webkit-transition: height 200ms ease-in;
      transition: height 200ms ease-in;
