@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useProjectsValue, useSelectedProjectValue } from '../context';
 import { firebase } from '../firebase';
 import { useRef, useEffect } from 'react';
+
 export const IndividualProject = ({ project }) => {
 
   const [showConfirm, setShowConfirm] = useState(false);

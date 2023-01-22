@@ -274,7 +274,8 @@
      }
    
      nav {
-       display: grid;
+       display: flex;
+       justify-content: space-between;
        -webkit-box-align: center;
            -ms-flex-align: center;
                align-items: center;
@@ -290,6 +291,16 @@
          color: white;
        }
    
+       .search input {
+        height: 30px;
+        width: 300px;
+        font-size: 15px;
+        border: none;
+        border-radius: 2px;
+        background-color:#531f1fec;
+        color: #cacaca;
+       }
+
        div {
          &.logo {
            padding-left: 8px;
