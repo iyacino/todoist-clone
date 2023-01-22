@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { AddTask } from '../AddTask';
+import { useSearchContextValue } from '../../context/search-context';
 
 export const Header = ({ darkMode, setDarkMode }) => {
   const [shouldShowMain, setShouldShowMain] = useState(false);
   const [showQuickAddTask, setShowQuickAddTask] = useState(false);
-
+  const { setSearch } = useSearchContextValue();
   return (
     <header className="header" data-testid="header">
-      <nav>
+      <nav className='todoist-nav'>
         <div className="logo">
           <img src="/images/logo.png" alt="Todoist" />
         </div>
+
+        <div className="search">
+          <input type="search" name="search" id="search" placeholder='search' onChange={(e) => setSearch(e.target.value)}/>
+        </div>
+        
         <div className="settings">
           <ul>
             <li className="settings__add">
